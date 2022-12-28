@@ -60,9 +60,9 @@
             <a th:href="@{/{id}/edit (id = ${user.getId()})}">
                 <input type="button" value="Edit"/>
             </a>
-            <a th:href="@{/{id}/delete (id = ${user.getId()})}">
-                <input type="button" value="Delete"/>
-            </a>
+            <form th:method="DELETE" th:action="@{/{id}/delete(id=${user.getId()})}">
+                <input type="submit" value="Delete">
+            </form>
         </td>
     </tr>
 </table>
